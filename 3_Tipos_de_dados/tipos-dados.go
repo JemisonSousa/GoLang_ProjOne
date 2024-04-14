@@ -1,12 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 func main() {
 
-	var num_8bit int8 = 100 // também chamado de byte (apelido)
+	var num_8bit int8 = 100 // também chamado de 'byte' (apelido)
 	var num_16bit int16 = 10000
-	var num_32bit int32 = 1000000000 //tabém chamado de rune (apelido)
+	var num_32bit int32 = 1000000000 //tabém chamado de 'rune' (apelido)
 	var num_64bit int64 = 1000000000000000000
 	var num_AutoBit int = 10000
 	var num_sem_sinal uint = 100000 // sem sinal (não aceita negativo)
@@ -29,4 +32,15 @@ func main() {
 	var texto string = "Nome da estring aqui"
 	fmt.Println("Texto da String..............: ", texto)
 
+	varChar := '¨'
+	fmt.Println("Char.........................: ", varChar)
+
+	var booleano bool
+	fmt.Println("Booleano.....................: ", booleano)
+
+	var erro error
+	fmt.Println("Erro.........................: ", erro)
+
+	var erro2 error = errors.New("Erro interno")
+	fmt.Println("Erro.........................: ", erro2)
 }
